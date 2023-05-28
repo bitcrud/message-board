@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <main class="container">
+      <nav>
+        <ul>
+          <li>
+            <strong><a href="{% url 'home' %}">Message Board</a></strong>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#" role="button" class="outline">Login</a></li>
+        </ul>
+      </nav>
+      {% block content %} {% endblock content %}
+    </main>
+  </body>
+</html>

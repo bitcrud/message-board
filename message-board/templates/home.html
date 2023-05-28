@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<main class="container">
+  <h1>This is the home page</h1>
+</main>
+<ul>
+  {% for post in post_list %}
+  <details>
+    <summary><b>{{post.title}}</b></summary>
+    <p>{{post.text|truncatechars:220}}</p>
+  </details>
+
+  {% endfor %}
+</ul>
+{% endblock content %}
